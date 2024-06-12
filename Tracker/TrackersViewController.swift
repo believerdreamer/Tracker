@@ -29,17 +29,26 @@ final class TrackersViewController: UIViewController, UISearchBarDelegate {
     
     // MARK: - Setup UI
     private func setupPlusButtonAndDatePicker() {
-        let plusBarButton = UIBarButtonItem(customView: plusButton)
-
         let datePickerContainer = UIView()
+        datePickerContainer.translatesAutoresizingMaskIntoConstraints = false
         datePickerContainer.addSubview(datePicker)
         datePicker.centerYAnchor.constraint(equalTo: datePickerContainer.centerYAnchor).isActive = true
         datePicker.leadingAnchor.constraint(equalTo: datePickerContainer.leadingAnchor).isActive = true
         datePicker.trailingAnchor.constraint(equalTo: datePickerContainer.trailingAnchor).isActive = true
+        datePickerContainer.heightAnchor.constraint(equalTo: datePicker.heightAnchor).isActive = true
+        datePickerContainer.widthAnchor.constraint(equalTo: datePicker.widthAnchor).isActive = true
+
         let datePickerBarButton = UIBarButtonItem(customView: datePickerContainer)
+        let plusBarButton = UIBarButtonItem(customView: plusButton)
 
         navigationItem.leftBarButtonItem = plusBarButton
         navigationItem.rightBarButtonItem = datePickerBarButton
+
+        view.addSubview(datePickerContainer)
+        NSLayoutConstraint.activate([
+            datePickerContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            datePickerContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8)
+        ])
     }
 
     private func setupLargeTitle() {
@@ -110,10 +119,11 @@ final class TrackersViewController: UIViewController, UISearchBarDelegate {
     }()
     
     private lazy var datePicker: UIDatePicker = {
+        
         let datePicker = UIDatePicker()
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         datePicker.datePickerMode = .date
-        datePicker.preferredDatePickerStyle = .automatic
+        datePicker.preferredDatePickerStyle = .compact
         datePicker.heightAnchor.constraint(equalToConstant: 34).isActive = true
         datePicker.widthAnchor.constraint(equalToConstant: 100).isActive = true
         datePicker.date = Date()
