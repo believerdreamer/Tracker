@@ -10,16 +10,35 @@ import UIKit
 final class TabBarController: UITabBarController {
     override func viewDidLoad() {
          super.viewDidLoad()
-         
-         let trackersVC = TrackersViewController()
-         let statisticsVC = StatisticsViewController()
-         
-         trackersVC.tabBarItem = UITabBarItem(title: "Трекеры", image: UIImage(systemName: "list.bullet"), tag: 0)
-         statisticsVC.tabBarItem = UITabBarItem(title: "Статистика", image: UIImage(systemName: "chart.bar"), tag: 1)
-         
-         let trackersNavController = UINavigationController(rootViewController: trackersVC)
-         let statisticsNavController = UINavigationController(rootViewController: statisticsVC)
-         
-         viewControllers = [trackersNavController, statisticsNavController]
+         settingTabBar()
+         settingDeviderLine()
      }
+    
+    private func settingDeviderLine() {
+        tabBar.layer.borderColor = UIColor.gray.cgColor
+           tabBar.layer.borderWidth = 1.0
+           tabBar.clipsToBounds = true
+       }
+    
+    func settingTabBar() {
+        let trackersVC = TrackersViewController()
+        let statisticsVC = StatisticViewController()
+        
+        trackersVC.tabBarItem = UITabBarItem(
+            title: "Трекеры",
+            image: UIImage(named: "Trackers Bar Icon No Tapped"),
+            selectedImage: UIImage(named: "Trackers Bar Icon Tapped"))
+        
+        statisticsVC.tabBarItem = UITabBarItem(
+            title: "Статистика",
+            image: UIImage(named: "Statistic Bar Icon No Tapped"),
+            selectedImage: UIImage(named: "Statistic Bar Icon Tapped"))
+        
+        let trackersNavController = UINavigationController(rootViewController: trackersVC)
+        let statisticsNavController = UINavigationController(rootViewController: statisticsVC)
+        
+        // Убедитесь, что первая вкладка - Трекеры
+        viewControllers = [trackersNavController, statisticsNavController]
+    }
+
 }
