@@ -39,16 +39,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9807D4482C19D0E300DDDC7B /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				982EACA12C13389A00211774 /* TrackersViewController.swift */,
-				982EACA52C13776C00211774 /* StatisticViewController.swift */,
-				982EACA72C1377AF00211774 /* TabBarController.swift */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
 		982EAC812C13388800211774 = {
 			isa = PBXGroup;
 			children = (
@@ -68,14 +58,32 @@
 		982EAC8C2C13388800211774 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				982EAC8D2C13388800211774 /* AppDelegate.swift */,
-				9807D4482C19D0E300DDDC7B /* View Controllers */,
-				982EAC8F2C13388800211774 /* SceneDelegate.swift */,
-				982EAC962C13388A00211774 /* Assets.xcassets */,
-				982EAC982C13388A00211774 /* LaunchScreen.storyboard */,
-				982EAC9B2C13388A00211774 /* Info.plist */,
+				98F8033F2C1D84810034EAEA /* Resources */,
+				98F8033C2C1D83A60034EAEA /* Source */,
 			);
 			path = Tracker;
+			sourceTree = "<group>";
+		};
+		98F8033C2C1D83A60034EAEA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				982EAC8F2C13388800211774 /* SceneDelegate.swift */,
+				982EAC8D2C13388800211774 /* AppDelegate.swift */,
+				982EACA52C13776C00211774 /* StatisticViewController.swift */,
+				982EACA72C1377AF00211774 /* TabBarController.swift */,
+				982EACA12C13389A00211774 /* TrackersViewController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		98F8033F2C1D84810034EAEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				982EAC9B2C13388A00211774 /* Info.plist */,
+				982EAC982C13388A00211774 /* LaunchScreen.storyboard */,
+				982EAC962C13388A00211774 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
