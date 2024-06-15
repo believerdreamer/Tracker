@@ -17,9 +17,6 @@ final class TrackersViewController: UIViewController, UISearchBarDelegate {
         setupUI()
     }
     
-    // MARK: - Private Methods
-
-
     // MARK: - Public Methods
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {

@@ -8,19 +8,24 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
          super.viewDidLoad()
          settingTabBar()
          settingDeviderLine()
      }
     
+    //MARK: - Private Methods
     private func settingDeviderLine() {
         tabBar.layer.borderColor = UIColor.gray.cgColor
            tabBar.layer.borderWidth = 1.0
            tabBar.clipsToBounds = true
        }
     
+    //MARK: - Puvlic Methods
     func settingTabBar() {
+        
         let trackersVC = TrackersViewController()
         let statisticsVC = StatisticViewController()
         
@@ -37,7 +42,6 @@ final class TabBarController: UITabBarController {
         let trackersNavController = UINavigationController(rootViewController: trackersVC)
         let statisticsNavController = UINavigationController(rootViewController: statisticsVC)
         
-        // Убедитесь, что первая вкладка - Трекеры
         viewControllers = [trackersNavController, statisticsNavController]
     }
 
