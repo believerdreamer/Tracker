@@ -8,6 +8,14 @@
 import UIKit
 
 final class TrackersViewController: UIViewController, UISearchBarDelegate {
+    
+    //MARK: - Private Properties
+    var categories: [TrackerCategoryModel] = []
+    var completedTrackers: [TrackerRecordModel] = []
+    
+    //MARK: - Public Properties
+    //nothing
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
