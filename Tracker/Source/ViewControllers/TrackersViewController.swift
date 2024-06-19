@@ -5,7 +5,6 @@
 //  Created by Архип Семёнов on 07.06.2024.
 //
 
-
 import UIKit
 
 final class TrackersViewController: UIViewController, UISearchBarDelegate {

@@ -64,14 +64,30 @@
 			path = Tracker;
 			sourceTree = "<group>";
 		};
+		987BAF1B2C22F65100339029 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		987BAF1C2C22F6D300339029 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				982EACA12C13389A00211774 /* TrackersViewController.swift */,
+				982EACA52C13776C00211774 /* StatisticViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		98F8033C2C1D83A60034EAEA /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				982EAC8F2C13388800211774 /* SceneDelegate.swift */,
-				982EAC8D2C13388800211774 /* AppDelegate.swift */,
-				982EACA52C13776C00211774 /* StatisticViewController.swift */,
 				982EACA72C1377AF00211774 /* TabBarController.swift */,
-				982EACA12C13389A00211774 /* TrackersViewController.swift */,
+				982EAC8D2C13388800211774 /* AppDelegate.swift */,
+				982EAC8F2C13388800211774 /* SceneDelegate.swift */,
+				987BAF1C2C22F6D300339029 /* ViewControllers */,
+				987BAF1B2C22F65100339029 /* Models */,
 			);
 			path = Source;
 			sourceTree = "<group>";
